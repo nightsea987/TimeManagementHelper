@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>595</width>
+    <height>422</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QScrollArea" name="scrollArea">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>60</y>
+     <width>591</width>
+     <height>361</height>
+    </rect>
+   </property>
+   <property name="widgetResizable">
+    <bool>true</bool>
+   </property>
+   <widget class="QWidget" name="scrollAreaWidgetContents">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>589</width>
+      <height>359</height>
+     </rect>
+    </property>
+    <widget class="QPlainTextEdit" name="text_note_edit">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>591</width>
+       <height>361</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="cursor" stdset="0">
+      <cursorShape>IBeamCursor</cursorShape>
+     </property>
+     <property name="mouseTracking">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">padding-left: 30px; padding-right: 30px; font-size: 14px;</string>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="placeholderText">
+      <string>Заголовок</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QFontComboBox" name="fontComboBox">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>10</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="open_file_btn">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>71</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {background-color:  rgba(51,122,183, 0.4); border: 1px solid black;}
+QPushButton:hover {background-color:  rgba(51,122,183, 0.7);}
+QPushButton:checked {background-color:  rgba(51,122,183, 0.9);}</string>
+   </property>
+   <property name="text">
+    <string>Открыть
+ файл</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="save_note_btn">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>10</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {background-color:  rgba(51,122,183, 0.4); border: 1px solid black;}
+QPushButton:hover {background-color:  rgba(51,122,183, 0.7);}
+QPushButton:checked {background-color:  rgba(51,122,183, 0.9);}</string>
+   </property>
+   <property name="text">
+    <string>Сохранить
+ заметку</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="font_size_box">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>10</y>
+     <width>61</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QComboBox {background-color:   rgba(51,122,183, 0.5); border: 1px solid grey;}
+QComboBox:hover { border: 1px solid black;}
+QComboBox::drop-down { border: none;}
+QComboBox::drop-down:hover {border: 1px solid rgba(51,122,183, 0.3);
+													background-color:   rgba(51,122,183, 0.2)}
+QComboBox::down-arrow
+{
+		background-image: black url(D:\Яндекс\работа с pyqt\ПРОЕКТ\картинки, мелодии\arrow-down2_78573.png) no-repeat 50% 50%;
+    	width: 16px;
+   	 	height: 16px;
+}</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>12px</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>14px</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>16px</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QPushButton" name="get_color_btn">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>10</y>
+     <width>71</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {background-color:  rgba(51,122,183, 0.4); border: 1px solid black;}
+QPushButton:hover {background-color:  rgba(51,122,183, 0.7);}
+QPushButton:checked {background-color:  rgba(51,122,183, 0.9);}</string>
+   </property>
+   <property name="text">
+    <string>Цвет 
+заметки</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="del_note_btn">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>10</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {background-color:  rgba(51,122,183, 0.4); border: 1px solid black;}
+QPushButton:hover {background-color:  rgba(51,122,183, 0.7);}
+QPushButton:checked {background-color:  rgba(51,122,183, 0.9);}</string>
+   </property>
+   <property name="text">
+    <string>Удалить 
+ заметку</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>445</width>
+    <height>374</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>50</y>
+     <width>271</width>
+     <height>281</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QPushButton" name="pomo_duration">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>-1</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {background-color:  rgba(51,122,183, 0.3); 
+
+                       color: black;
+					   font-size: 14px; font-family: Arial;}
+QPushButton:hover {background-color:  rgba(51,122,183, 0.7);}
+QPushButton:pressed {background-color:  rgba(51,122,183, 0.9);}</string>
+      </property>
+      <property name="text">
+       <string>Длительность помодоро</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="short_duration">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>-1</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {background-color:  rgba(51,122,183, 0.3); 
+
+                       color: black;
+					   font-size: 14px; font-family: Arial;}
+QPushButton:hover {background-color:  rgba(51,122,183, 0.7);}
+QPushButton:pressed {background-color:  rgba(51,122,183, 0.9);}</string>
+      </property>
+      <property name="text">
+       <string>Длительность маленького перерыва</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="long_break_duration">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>-1</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {background-color:  rgba(51,122,183, 0.3); 
+
+                       color: black;
+					   font-size: 14px; font-family: Arial;}
+QPushButton:hover {background-color:  rgba(51,122,183, 0.7);}
+QPushButton:pressed {background-color:  rgba(51,122,183, 0.9);}</string>
+      </property>
+      <property name="text">
+       <string>Длительность большого перерыва</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>-1</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {background-color:  rgba(51,122,183, 0.3); 
+
+                       color: black;
+					   font-size: 14px; font-family: Arial;}
+QPushButton:hover {background-color:  rgba(51,122,183, 0.7);}
+QPushButton:pressed {background-color:  rgba(51,122,183, 0.9);}</string>
+      </property>
+      <property name="text">
+       <string>Количество сессий</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="Line" name="line">
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="autostart">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Автостарт следующего помодоро</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="rington">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>-1</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {background-color:  rgba(51,122,183, 0.3); 
+
+                       color: black;
+					   font-size: 14px; font-family: Arial;}
+QPushButton:hover {background-color:  rgba(51,122,183, 0.7);}
+QPushButton:pressed {background-color:  rgba(51,122,183, 0.9);}</string>
+      </property>
+      <property name="text">
+       <string>Изменить рингтон</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
