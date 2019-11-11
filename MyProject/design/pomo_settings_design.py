@@ -109,7 +109,7 @@ class Ui_Form(object):
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Настройки Pomo"))
+        Form.setWindowTitle(_translate("Form", "Настройки Pomodoro"))
         self.pomo_duration.setText(_translate("Form", f"Длительность помодоро - \n {25}min"))
         self.break_duration.setText(_translate("Form", f"Длительность перерыва - {5}min"))
         self.write_task.setPlaceholderText("Введите задачу, над которой Вам нужно работать")

@@ -57,7 +57,7 @@ class CreateNote(QWidget, Ui_Form):
         self.color = self.background_color
         if self.background_color == '':
             self.color = '#fff'
-        con = sqlite3.connect('my_project.db')
+        con = sqlite3.connect('other_files/my_project.db')
         cur = con.cursor()
         cur.execute(f"""INSERT INTO notes(note, fontfamily, fontsize, color) 
         VALUES ('{self.text_note_edit.toPlainText()}', 
@@ -90,16 +90,15 @@ class EditNote(CreateNote):
         self.setWindowTitle('Редактировать заметку')
 
     def add_note_info(self):
-        con = sqlite3.connect('my_project.db')
+        con = sqlite3.connect('other_files/my_project.db')
         cur = con.cursor()
         self.notes_info = cur.execute(f"""SELECT * FROM notes
                 WHERE id = {self.current_note_id}""").fetchall()
         con.commit()
         con.close()
-        print(self.notes_info)
 
     def del_note(self):
-        con = sqlite3.connect('my_project.db')
+        con = sqlite3.connect('other_files/my_project.db')
         cur = con.cursor()
         cur.execute(f"""DELETE FROM notes WHERE id = {self.current_note_id}""")
         con.commit()
@@ -109,7 +108,7 @@ class EditNote(CreateNote):
         self.close()
 
     def save_note(self):
-        con = sqlite3.connect('my_project.db')
+        con = sqlite3.connect('other_files/my_project.db')
         cur = con.cursor()
         cur.execute(f"""UPDATE notes SET note =
             '{self.text_note_edit.toPlainText()}',

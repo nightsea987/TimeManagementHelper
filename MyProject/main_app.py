@@ -3,9 +3,8 @@ from PyQt5.QtWidgets import QApplication, QTabWidget, QPlainTextEdit, \
 from PyQt5.QtCore import QSize, Qt, QTimer, QUrl
 from PyQt5.QtMultimedia import QMediaContent, QMediaPlayer
 import sys
-from MyProject.design.mainwindow_bad_design import Ui_TabWidget
+from MyProject.design.main_app_design import Ui_TabWidget
 from MyProject.add_note import CreateNote, EditNote
-from MyProject.add_tasks import CreateTask
 from MyProject.pomo_settings import SetPomoTimer
 from MyProject.design.about_pomo_design import Ui_ScrollArea
 import sqlite3
@@ -34,9 +33,6 @@ class MainApplication(QTabWidget, Ui_TabWidget):
 
         self.add_notes()
 
-        self.create_task = CreateTask()
-        self.add_task.clicked.connect(self.create_task.show)
-
         self.set_pomo_timer = SetPomoTimer()
         self.add_timer_pomo.clicked.connect(self.set_pomo_timer.show)
 
@@ -64,7 +60,7 @@ class MainApplication(QTabWidget, Ui_TabWidget):
         self.edit_note.show()
 
     def add_info(self):
-        con = sqlite3.connect('my_project.db')
+        con = sqlite3.connect('other_files/my_project.db')
         cur = con.cursor()
         self.notes_info = cur.execute("""SELECT * FROM notes""").fetchall()
         con.commit()
@@ -80,8 +76,8 @@ class MainApplication(QTabWidget, Ui_TabWidget):
         self.update_notes()
         for i in range(len(self.notes_info)):
             self.note_id = self.notes_info[i][0]
-            self.text = self.notes_info[i][1][:120]
-            if len(self.notes_info[i][1]) < 120:
+            self.text = self.notes_info[i][1][:130]
+            if len(self.notes_info[i][1]) < 130:
                 self.note = QPlainTextWithID(self.text, self, self.note_id)
             else:
                 self.note = QPlainTextWithID(self.text + ' ...', self,
@@ -112,7 +108,7 @@ class MainApplication(QTabWidget, Ui_TabWidget):
         self.edit_note_func(self.sender().id)
 
     def add_pomo_info(self):
-        con = sqlite3.connect('my_project.db')
+        con = sqlite3.connect('other_files/my_project.db')
         cur = con.cursor()
         self.pomo_info = cur.execute("""SELECT * FROM pomoSettings 
             WHERE id = 1""").fetchall()
@@ -127,8 +123,10 @@ class MainApplication(QTabWidget, Ui_TabWidget):
 
         if self.is_break is False:
             self.current_duration = self.pomo_info[0][1] * 60
+            self.timer_pomo.setStyleSheet('color: rgb(51,122,183)')
         else:
             self.current_duration = self.pomo_info[0][2] * 60
+            self.timer_pomo.setStyleSheet('color: #50c878;')
 
         self.current_time = self.current_duration
         minuts, seconds = divmod(self.current_time, 60)
@@ -163,6 +161,7 @@ class MainApplication(QTabWidget, Ui_TabWidget):
 
             self.start_pomo_btn.setText('Продолжить')
             self.player.play()
+            self.start_pomo_btn.setDisabled(False)
             self.exit_from_process_btn.setDisabled(True)
             self.exit_from_process_btn.setVisible(False)
 

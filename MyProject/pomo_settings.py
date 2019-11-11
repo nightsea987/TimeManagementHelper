@@ -5,11 +5,10 @@ from MyProject.design.dialog_time_design import Ui_Dialog
 from MyProject.design.pomo_settings_design import Ui_Form
 from MyProject.ringtons import GetRington
 
-con = sqlite3.connect('my_project.db')
+con = sqlite3.connect('other_files/my_project.db')
 cur = con.cursor()
 POMO_SETTINGS_INFO = cur.execute("""SELECT * FROM pomoSettings 
     WHERE id = 1""").fetchall()
-
 con.commit()
 con.close()
 
@@ -41,8 +40,7 @@ class SetPomoTimer(QWidget, Ui_Form):
         self.pomo_duration_value = int(
             self.set_pomo_duration.return_pomo_value())
 
-
-        con = sqlite3.connect('my_project.db')
+        con = sqlite3.connect('other_files/my_project.db')
         cur = con.cursor()
         cur.execute(f"""UPDATE pomoSettings 
         SET pomoDuration = {self.pomo_duration_value},
