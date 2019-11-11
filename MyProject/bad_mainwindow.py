@@ -27,8 +27,8 @@ class MainApplication(QTabWidget, Ui_TabWidget):
         self.setupUi(self)
         self.add_note_btn.clicked.connect(self.create_note_func)
 
-        self.mw = QScrollArea(self.notes_window)
-        self.wid = QWidget(self)
+        self.scroll_area = QScrollArea(self.notes_window)
+        self.notes_widget = QWidget(self)
         self.main_layout = QGridLayout(self)
         self.main_layout.setContentsMargins(20, 20, 10, 10)
 
@@ -96,15 +96,15 @@ class MainApplication(QTabWidget, Ui_TabWidget):
             self.note.selectionChanged.connect(self.dblClickNote)
 
             self.main_layout.addWidget(self.note, i // 3, i % 3, 1, 1)
-            self.wid.setGeometry(10, 10, 551, (i // 3 + 1) * 170 + 14)
+            self.notes_widget.setGeometry(10, 10, 551, (i // 3 + 1) * 170 + 14)
 
-        self.wid.setLayout(self.main_layout)
-        self.wid.setStyleSheet('background-color: white;')
-        self.wid.updateGeometry()
+        self.notes_widget.setLayout(self.main_layout)
+        self.notes_widget.setStyleSheet('background-color: white;')
+        self.notes_widget.updateGeometry()
 
-        self.mw.setWidget(self.wid)
-        self.mw.setGeometry(10, 20, 571, 391)
-        self.mw.setStyleSheet('background-color: white;')
+        self.scroll_area.setWidget(self.notes_widget)
+        self.scroll_area.setGeometry(10, 20, 571, 391)
+        self.scroll_area.setStyleSheet('background-color: white;')
 
         self.add_note_btn.raise_()
 
