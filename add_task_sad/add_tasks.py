@@ -1,10 +1,9 @@
-from PyQt5.QtWidgets import QMainWindow, QWidget, QApplication, QFileDialog
-from PyQt5.QtGui import QFont
+from PyQt5.QtWidgets import QWidget, QApplication
 from PyQt5.QtCore import QDate, Qt
 from PyQt5.QtGui import QColor
 import sys
 import sqlite3
-from MyProject.design.add_tasks_design import Ui_Form
+from add_task_sad.add_tasks_design import Ui_Form
 from create_group import CreateGroup
 
 GROUPS_COLOR_DC = {'Коричневый': '#a65e2e', 'Красный': '#ff2b2b',

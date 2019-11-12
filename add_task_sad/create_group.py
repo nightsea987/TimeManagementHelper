@@ -1,7 +1,7 @@
-from PyQt5.QtWidgets import QWidget, QApplication, QLabel
+from PyQt5.QtWidgets import QWidget, QApplication
 import sys
 import sqlite3
-from MyProject.design.create_group_design import Ui_Form
+from add_task_sad.create_group_design import Ui_Form
 
 
 class CreateGroup(QWidget, Ui_Form):

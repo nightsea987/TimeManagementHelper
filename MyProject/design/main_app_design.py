@@ -98,10 +98,10 @@ class Ui_TabWidget(object):
                                           'border-radius: 25px;')
 
         self.about_pomodoro = QtWidgets.QPushButton(self.pomodoro_window)
-        self.about_pomodoro.setGeometry(535, 25, 35, 35)
+        self.about_pomodoro.setGeometry(510, 15, 65, 65)
         self.about_pomodoro.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.about_pomodoro.setStyleSheet(
-            'QPushButton {border-radius: 17px; background-color: white; image: url(other_files/pomo_settings_picture.png)};'
+            'QPushButton {border-radius: 17px; background-color: white; image: url(other_files/pomo.png)};'
             'QPushButton:pressed {background-color: rgba(51,122,183, 0.3)};')
         self.about_pomodoro.setToolTip('О технике Pomodoro')
         TabWidget.addTab(self.pomodoro_window, "")
