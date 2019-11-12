@@ -119,6 +119,7 @@ class SetSessionsCount(QWidget, Ui_Dialog):
         self.set_duration.valueChanged.connect(self.show_duration.display)
         self.buttonBox.accepted.connect(self.func_accepted)
         self.show_duration.display(SetSessionsCount.value_of_sessions)
+        self.setWindowTitle('Настроить количество сессий')
 
     def func_accepted(self):
         SetSessionsCount.value_of_sessions = int(self.show_duration.value())
